@@ -32,20 +32,7 @@ const MonthDateBtn = ({ selectedDate, onChange }: MonthDateBtnProps) => {
   return (
     <div>
       <LocaleArrow type="prev" onClick={handlePrev} />
-      <DateProvider>
-        <DatePicker
-          open={open}
-          onClose={toggleDialog}
-          openTo="month"
-          views={["year", "month"]}
-          value={selectedDate}
-          onChange={handleChange}
-          renderInput={(params) => (
-            <Button
-              ref={params.inputRef}
-              style={{ padding: 4 }}
-              onClick={toggleDialog}
-            >
+
               {format(parseISO(selectedDate), "M MMMM yyyy", { locale: locale })}
             </Button>
           )}
