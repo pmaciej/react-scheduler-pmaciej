@@ -2,7 +2,7 @@ import { useState } from "react";
 import DateProvider from "../hoc/DateProvider";
 import DatePicker from "@mui/lab/DatePicker";
 import { Button } from "@mui/material";
-import { format, getMonth, setMonth } from "date-fns";
+import { format, getMonth, setMonth, parseISO } from "date-fns";
 import { LocaleArrow } from "../common/LocaleArrow";
 import { useAppState } from "../../hooks/useAppState";
 
@@ -46,7 +46,7 @@ const MonthDateBtn = ({ selectedDate, onChange }: MonthDateBtnProps) => {
               style={{ padding: 4 }}
               onClick={toggleDialog}
             >
-              {format(selectedDate, "MMMM yyyy", { locale: locale })}
+              {format(parseISO(selectedDate), "MMMM yyyy", { locale: locale })}
             </Button>
           )}
         />
