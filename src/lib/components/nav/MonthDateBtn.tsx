@@ -31,14 +31,7 @@ const MonthDateBtn = ({ selectedDate, onChange }: MonthDateBtnProps) => {
   };
   return (
     <div>
-      <LocaleArrow type="prev" onClick={handlePrev} />
 
-              {format(parseISO(selectedDate), "M MMMM yyyy", { locale: locale })}
-            </Button>
-          )}
-        />
-      </DateProvider>
-      <LocaleArrow type="next" onClick={handleNext} />
     </div>
   );
 };
