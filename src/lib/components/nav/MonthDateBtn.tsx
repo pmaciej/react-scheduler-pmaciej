@@ -46,7 +46,7 @@ const MonthDateBtn = ({ selectedDate, onChange }: MonthDateBtnProps) => {
               style={{ padding: 4 }}
               onClick={toggleDialog}
             >
-              {format(parseISO(selectedDate), "MMMM yyyy", { locale: locale })}
+              {format(parseISO(selectedDate), "M MMMM yyyy", { locale: locale })}
             </Button>
           )}
         />
